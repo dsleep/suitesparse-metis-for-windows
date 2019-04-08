@@ -270,7 +270,7 @@ ELSE()
 		file(GLOB lapack_blas_windows_libs 	"${CMAKE_SOURCE_DIR}/lapack_windows/${PATH_WORD_SIZE}/*.lib")
 		file(GLOB lapack_blas_windows_dll 	"${CMAKE_SOURCE_DIR}/lapack_windows/${PATH_WORD_SIZE}/*.dll")
 		if(lapack_blas_windows_dll AND lapack_blas_windows_libs)
-			set(SuiteSparse_LAPACK_BLAS_LIB_DIR "lib${LIB_POSTFIX}/lapack_blas_windows")
+			set(SuiteSparse_LAPACK_BLAS_LIB_DIR "${CMAKE_INSTALL_LIBDIR}/lapack_blas")
 			install(FILES 		${lapack_blas_windows_libs}
 								${lapack_blas_windows_dll}
 					DESTINATION ${SuiteSparse_LAPACK_BLAS_LIB_DIR}
